@@ -5,17 +5,19 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard --fix",
-    "server-dev": "NODE_ENV=development nodemon index.js"
+    "server-dev": "NODE_ENV=development DB_URI=\"mongodb+srv://julius2grow_dev:c6mxKCmDtDEkaCvT@cluster0.bxwtp.gcp.mongodb.net/julius2grow_dev?retryWrites=true&w=majority\" nodemon index.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "awilix": "^4.2.6",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.0"
   },
   "devDependencies": {

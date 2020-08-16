@@ -1,6 +1,5 @@
 const container = require('./container')
 
-
 const database = container.resolve('database')
 const server = container.resolve('server')
 const logger = container.resolve('logger')

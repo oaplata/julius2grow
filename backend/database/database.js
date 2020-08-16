@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 class Database {
   constructor ({ config, logger }) {
-    this._connection = null 
+    this._connection = null
     this._config = config
     this._logger = logger
   }
