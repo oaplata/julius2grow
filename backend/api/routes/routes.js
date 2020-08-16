@@ -1,6 +1,6 @@
-const { Router } = require('express')
-const bodyParser = require('body-parser')
+const { Router, urlencoded, json } = require('express')
 const cors = require('cors')
+const helmet = require('helmet')
 const compression = require('compression')
 
 module.exports = function ({ userRoutes }) {
@@ -9,7 +9,9 @@ module.exports = function ({ userRoutes }) {
 
   apiRouter
     .use(cors())
-    .use(bodyParser.json())
+    .use(helmet())
+    .use(urlencoded({ extended: false }))
+    .use(json())
     .use(compression())
 
   apiRouter.use('/users', userRoutes)
