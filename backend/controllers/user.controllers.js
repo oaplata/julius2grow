@@ -1,8 +1,10 @@
 class UserController {
-  constructor () { }
+  constructor ({ userModel }) {
+    this._userModel = userModel
+  }
 
   getAll () {
-    return []
+    return this._userModel.getAll()
   }
 
 }
