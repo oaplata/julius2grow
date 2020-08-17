@@ -1,3 +1,5 @@
+'use strict'
+
 const { createContainer } = require('awilix')
 const Config = require('./config')
 const Routes = require('./routes')

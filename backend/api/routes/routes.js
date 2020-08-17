@@ -1,9 +1,11 @@
+'use strict'
+
 const { Router, urlencoded, json } = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
 const compression = require('compression')
 
-module.exports = function ({ userRoutes }) {
+module.exports = function ({ userRoutes, postRoutes }) {
   const router = Router()
   const apiRouter = Router()
 
@@ -15,6 +17,7 @@ module.exports = function ({ userRoutes }) {
     .use(compression())
 
   apiRouter.use('/users', userRoutes)
+  apiRouter.use('/post', postRoutes)
 
   router.use('/api', apiRouter)
 

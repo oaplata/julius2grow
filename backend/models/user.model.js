@@ -1,3 +1,5 @@
+'use strict'
+
 const mongoose = require('mongoose')
 
 class UserModel {
@@ -16,7 +18,7 @@ class UserModel {
         type: String,
         required: [true, 'password_required']
       }
-    })
+    },  { timestamps: {} })
     this._userModel = mongoose.model('user', this._userSchema)
   }
 
@@ -38,7 +40,7 @@ class UserModel {
   }
 
   async update ({ id, data }) {
-    return this._userModel.findByIdAndUpdate(id, data, { new: true })
+    return this._userModel.findOneAndUpdate({ _id: id }, data, { new: true })
   }
 }
 

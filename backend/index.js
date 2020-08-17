@@ -1,3 +1,5 @@
+'use strict'
+
 const container = require('./container')
 
 const database = container.resolve('database')

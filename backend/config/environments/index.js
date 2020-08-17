@@ -1,3 +1,5 @@
+'use strict'
+
 const development = require('./development')
 const production = require('./production')
 

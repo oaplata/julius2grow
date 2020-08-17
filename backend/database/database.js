@@ -1,3 +1,5 @@
+'use strict'
+
 const mongoose = require('mongoose')
 
 class Database {
@@ -15,7 +17,7 @@ class Database {
   }
 
   async connect () {
-    await mongoose.connect(this._config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    await mongoose.connect(this._config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
     this._connection = true
   }
 }

@@ -1,3 +1,5 @@
+'use strict'
+
 class UserController {
   constructor ({ userModel, crypto, tryCatch, authentication }) {
     this._userModel = userModel

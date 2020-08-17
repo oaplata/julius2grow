@@ -1,3 +1,5 @@
+'use strict'
+
 const { asValue, asClass } = require('awilix')
 const config = require('../config/environments')
 const Server = require('../api/server')

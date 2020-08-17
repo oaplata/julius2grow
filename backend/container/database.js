@@ -1,3 +1,5 @@
+'use strict'
+
 const { asClass } = require('awilix')
 
 const { Database } = require('../database')
