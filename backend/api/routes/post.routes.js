@@ -6,7 +6,7 @@ module.exports = function ({ postControllers, authorizationMiddleware }) {
   const router = Router()
 
   router.use(authorizationMiddleware.authenticate.bind(authorizationMiddleware))
-  
+
   router
     .post('/', async (req, res) => {
       const post = req.body

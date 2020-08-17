@@ -18,7 +18,7 @@ class UserModel {
         type: String,
         required: [true, 'password_required']
       }
-    },  { timestamps: {} })
+    }, { timestamps: {} })
     this._userModel = mongoose.model('user', this._userSchema)
   }
 

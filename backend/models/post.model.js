@@ -67,11 +67,11 @@ class PostModel {
     this._validateObjectId({ id: user, label: 'user_not_valid' })
     const count = await this._postModel
       .countDocuments({
-      user,
-      $text: {
-        $search: query,
-        $caseSensitive: false
-      }
+        user,
+        $text: {
+          $search: query,
+          $caseSensitive: false
+        }
       })
       .exec()
     const rows = await this._postModel

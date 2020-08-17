@@ -6,7 +6,7 @@ class AuthorizationMiddleware {
   }
 
   getToken ({ req, res }) {
-    return req.headers['authorization'] || req.headers['x-access-token']
+    return req.headers.authorization || req.headers['x-access-token']
   }
 
   isToken ({ res, token }) {

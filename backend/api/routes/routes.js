@@ -5,7 +5,7 @@ const cors = require('cors')
 const helmet = require('helmet')
 const compression = require('compression')
 
-module.exports = function ({ userRoutes, postRoutes }) {
+module.exports = function ({ userRoutes, postRoutes, uploadRoutes }) {
   const router = Router()
   const apiRouter = Router()
 
@@ -18,6 +18,7 @@ module.exports = function ({ userRoutes, postRoutes }) {
 
   apiRouter.use('/users', userRoutes)
   apiRouter.use('/post', postRoutes)
+  apiRouter.use('/upload', uploadRoutes)
 
   router.use('/api', apiRouter)
 
